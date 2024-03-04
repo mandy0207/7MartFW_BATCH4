@@ -6,6 +6,7 @@
       <class name="com.obsqura.tests.LoginTest">
         <methods>
           <include name="initDriver"/>
+          <include name="tearDown"/>
           <include name="verifyUserIsAbleToLogin"/>
         </methods>
       </class> <!-- com.obsqura.tests.LoginTest -->
