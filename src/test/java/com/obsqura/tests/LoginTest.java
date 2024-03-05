@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest {
 
 	@Test
 	public void verifyUserIsAbleToLogin() {
-		
+	
 	  
 		LoginPage lp = new LoginPage(driver);
 		lp.Login();
@@ -19,11 +19,6 @@ public class LoginTest extends BaseTest {
 		String actualHeader=hp.getBrandHeader();
 		
 		Assert.assertEquals(actualHeader, "7rmart supermarket");
-		
-		
-		
-		
-		
 		
 		
 		

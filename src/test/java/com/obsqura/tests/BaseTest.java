@@ -1,5 +1,7 @@
 package com.obsqura.tests;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -28,6 +30,7 @@ public class BaseTest {
 		}
 
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 		
 	}

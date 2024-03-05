@@ -14,13 +14,26 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	
 	@FindBy(css=".brand-text")
 	private WebElement brandHeader;
+	
+	@FindBy(xpath="(//p[contains(text(),'Manage Expense')])[1]")
+	private WebElement manageExpenseToggle;
+	
+	@FindBy(xpath="//*[contains(text(),'Expense Category')]")
+	private WebElement expenseCategory;
+	
+	
 	
 	public String getBrandHeader() {
 		return brandHeader.getText();
 	}
+	
+	public void navigateToExpenseCategoryPage() {
+		manageExpenseToggle.click();
+		expenseCategory.click();
+	}
+	
 	
 
 	
