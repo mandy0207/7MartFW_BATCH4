@@ -5,11 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ExpenseCategoryPage {
+import com.obsqura.utils.PageActions;
 
-	WebDriver driver;
+public class ExpenseCategoryPage extends PageActions{
+
+	private  WebDriver driver;
 	
 	public ExpenseCategoryPage(WebDriver driver) {
+		super(driver);
 		this.driver= driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -26,15 +29,23 @@ public class ExpenseCategoryPage {
 	@FindBy(css=".alert-success")
 	private WebElement alertMsg;
 	
-
+	@FindBy(xpath="//tr[1]/td[2]//a[2]")
+	private WebElement deleteBtn;
+	
 
 	public String createExpense(String value) {
-		newBtn.click();
-		titleBox.sendKeys(value);
-		searchBtn.click();
+		clickElement(newBtn);
+		setTextBox(titleBox, value);
+		clickElement(searchBtn);
 		String alertText=alertMsg.getText();
-		return alertText.split("!")[1].trim();
-				
+		return  getSplitStringText(alertText);	
+	}
+	
+	public String deleteExpense() {
+		clickElement(deleteBtn);
+		acceptAlert();
+		String alertText=alertMsg.getText();
+		return getSplitStringText(alertText);
 	}
 	
 

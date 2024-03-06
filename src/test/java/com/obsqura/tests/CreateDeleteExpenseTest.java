@@ -8,18 +8,15 @@ import com.obsqura.pages.HomePage;
 import com.obsqura.pages.LoginPage;
 import com.obsqura.utils.UniqueGenerator;
 
-public class CreateExpenseTest extends BaseTest {
+public class CreateDeleteExpenseTest extends BaseTest {
 
 	@Test
 	public void anotherTest() {
 	
-		LoginPage lp = new LoginPage(driver);
 		lp.Login();
-		
-		HomePage hp = new HomePage(driver);
 		hp.navigateToExpenseCategoryPage();
 		
-		ExpenseCategoryPage exp= new ExpenseCategoryPage(driver);
+		
 		String uniqueCategory= "Expense".concat(UniqueGenerator.getCurrentDateTime());
 		
 		String actualAlertMsg=exp.createExpense(uniqueCategory);
@@ -29,9 +26,8 @@ public class CreateExpenseTest extends BaseTest {
 		 */
 		Assert.assertEquals(actualAlertMsg, "Expense Category Created Successfully");
 		
-		
-		
-		
+		String deleteAlertMsg=exp.deleteExpense();
+		Assert.assertEquals(deleteAlertMsg, "Expense Category Deleted Successfully");	
 		
 	}
 }

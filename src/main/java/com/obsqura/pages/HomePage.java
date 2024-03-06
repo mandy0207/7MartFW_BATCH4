@@ -5,11 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
+import com.obsqura.utils.PageActions;
 
-	WebDriver driver;
+public class HomePage  extends PageActions{
+
+	private WebDriver driver;
 	
 	public HomePage(WebDriver driver) {
+		super(driver);
 		this.driver= driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -30,10 +33,10 @@ public class HomePage {
 	}
 	
 	public void navigateToExpenseCategoryPage() {
-		manageExpenseToggle.click();
-		expenseCategory.click();
+		clickElement(manageExpenseToggle);
+		clickElement(expenseCategory);
+		
 	}
-	
 	
 
 	
