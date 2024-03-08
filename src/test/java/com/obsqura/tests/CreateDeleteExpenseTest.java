@@ -1,5 +1,7 @@
 package com.obsqura.tests;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,7 +13,7 @@ import com.obsqura.utils.UniqueGenerator;
 public class CreateDeleteExpenseTest extends BaseTest {
 
 	@Test
-	public void anotherTest() {
+	public void anotherTest() throws IOException {
 	
 		lp.Login();
 		hp.navigateToExpenseCategoryPage();

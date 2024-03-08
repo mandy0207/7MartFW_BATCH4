@@ -1,25 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-06T20:21:57 IST" name="Default suite" finished-at="2024-03-06T20:22:16 IST" duration-ms="18990">
+  <suite started-at="2024-03-08T20:41:35 IST" name="Default suite" finished-at="2024-03-08T20:42:14 IST" duration-ms="39349">
     <groups>
     </groups>
-    <test started-at="2024-03-06T20:21:57 IST" name="Default test" finished-at="2024-03-06T20:22:16 IST" duration-ms="18990">
-      <class name="com.obsqura.tests.CreateDeleteExpenseTest">
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.obsqura.tests.CreateDeleteExpenseTest@515aebb0]" started-at="2024-03-06T20:21:57 IST" name="initDriver" finished-at="2024-03-06T20:21:59 IST" duration-ms="2121" status="PASS">
+    <test started-at="2024-03-08T20:41:35 IST" name="Default test" finished-at="2024-03-08T20:42:14 IST" duration-ms="39349">
+      <class name="com.obsqura.tests.CreateDeliveryBoyTest">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.obsqura.tests.CreateDeliveryBoyTest@1d2adfbe]" started-at="2024-03-08T20:41:35 IST" name="initDriver" finished-at="2024-03-08T20:41:41 IST" duration-ms="6171" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="anotherTest()[pri:0, instance:com.obsqura.tests.CreateDeleteExpenseTest@515aebb0]" started-at="2024-03-06T20:21:59 IST" name="anotherTest" finished-at="2024-03-06T20:22:16 IST" duration-ms="16624" status="PASS">
+        <test-method signature="createDeliveryBoy(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.obsqura.tests.CreateDeliveryBoyTest@1d2adfbe]" started-at="2024-03-08T20:41:41 IST" name="createDeliveryBoy" data-provider="getData" finished-at="2024-03-08T20:41:55 IST" duration-ms="14235" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nisyy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[user734222910]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[965198727]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- anotherTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.obsqura.tests.CreateDeleteExpenseTest@515aebb0]" started-at="2024-03-06T20:22:16 IST" name="tearDown" finished-at="2024-03-06T20:22:16 IST" duration-ms="199" status="PASS">
+        </test-method> <!-- createDeliveryBoy -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.obsqura.tests.CreateDeliveryBoyTest@1d2adfbe]" started-at="2024-03-08T20:41:55 IST" name="tearDown" finished-at="2024-03-08T20:41:56 IST" duration-ms="211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.obsqura.tests.CreateDeleteExpenseTest -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.obsqura.tests.CreateDeliveryBoyTest@1d2adfbe]" started-at="2024-03-08T20:41:56 IST" name="initDriver" finished-at="2024-03-08T20:42:06 IST" duration-ms="10340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="createDeliveryBoy(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.obsqura.tests.CreateDeliveryBoyTest@1d2adfbe]" started-at="2024-03-08T20:42:06 IST" name="createDeliveryBoy" data-provider="getData" finished-at="2024-03-08T20:42:14 IST" duration-ms="8245" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Remya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[user142799059]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[392301008]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createDeliveryBoy -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.obsqura.tests.CreateDeliveryBoyTest@1d2adfbe]" started-at="2024-03-08T20:42:14 IST" name="tearDown" finished-at="2024-03-08T20:42:14 IST" duration-ms="112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.obsqura.tests.CreateDeliveryBoyTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

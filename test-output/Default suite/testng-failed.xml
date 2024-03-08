@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsqura.tests.LoginTest">
+      <class name="com.obsqura.tests.CreateDeliveryBoyTest">
         <methods>
           <include name="initDriver"/>
           <include name="tearDown"/>
-          <include name="verifyUserIsAbleToLogin"/>
+          <include name="createDeliveryBoy" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- com.obsqura.tests.LoginTest -->
+      </class> <!-- com.obsqura.tests.CreateDeliveryBoyTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

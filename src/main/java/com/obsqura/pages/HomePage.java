@@ -26,6 +26,9 @@ public class HomePage  extends PageActions{
 	@FindBy(xpath="//*[contains(text(),'Expense Category')]")
 	private WebElement expenseCategory;
 	
+	@FindBy(xpath="//*[contains(text(),'Manage Delivery Boy')]")
+	private WebElement manageDeliveryBoy;
+	
 	
 	
 	public String getBrandHeader() {
@@ -36,6 +39,10 @@ public class HomePage  extends PageActions{
 		clickElement(manageExpenseToggle);
 		clickElement(expenseCategory);
 		
+	}
+	
+	public void navigateToManageDeilveryBoy() {
+		clickElement(manageDeliveryBoy);
 	}
 	
 

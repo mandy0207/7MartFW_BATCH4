@@ -1,6 +1,7 @@
 package com.obsqura.utils;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -18,6 +19,7 @@ public class PageActions {
 	}
 	
 	public void setTextBox(WebElement element, String value) {
+		
 		element.sendKeys(value);
 	}
 	
@@ -34,6 +36,12 @@ public class PageActions {
 		/**
 		 * write a code to switch to child window
 		 */
+	}
+	
+	public void scrollToBottomofPage() {
+		JavascriptExecutor js= (JavascriptExecutor)driver;
+	     js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		
 	}
 	
 	
