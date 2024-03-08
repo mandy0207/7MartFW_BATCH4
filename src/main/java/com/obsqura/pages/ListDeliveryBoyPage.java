@@ -47,6 +47,8 @@ public class ListDeliveryBoyPage  extends PageActions{
 			e.printStackTrace();
 		}
 		clickElement(saveBtn);
+		
+		
 	
 	}
 	

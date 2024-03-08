@@ -17,8 +17,6 @@ public class CreateDeliveryBoyTest extends BaseTest {
 		System.out.println(name +" "+userName+" "+password);
 		ldb.submitDeliverBoyData( name,userName, password);
 		
-		
-			
 	}
 	
 	
