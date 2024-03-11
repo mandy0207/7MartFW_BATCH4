@@ -17,8 +17,7 @@ public class ListDeliveryBoyPage  extends PageActions{
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(css=".btn.btn-rounded.btn-danger")
-	private WebElement newBtn;
+	
 	
 	@FindBy(id="name")
 	private WebElement nameInput;
@@ -28,10 +27,7 @@ public class ListDeliveryBoyPage  extends PageActions{
 	
 	@FindBy(id="password")
 	private WebElement passwordInput;
-	
 
-	@FindBy(name="create")
-	private WebElement saveBtn;
 	
 	
 	public void submitDeliverBoyData(String name, String userName, String password) {

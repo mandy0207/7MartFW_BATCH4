@@ -17,17 +17,13 @@ public class ExpenseCategoryPage extends PageActions{
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(css=".btn.btn-rounded.btn-danger")
-	private WebElement newBtn;
+
 	
 	@FindBy(id="name")
 	private WebElement titleBox;
 	
 	@FindBy(name="Create")
 	private WebElement searchBtn;
-	
-	@FindBy(css=".alert-success")
-	private WebElement alertMsg;
 	
 	@FindBy(xpath="//tr[1]/td[2]//a[2]")
 	private WebElement deleteBtn;

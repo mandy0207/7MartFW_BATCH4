@@ -1,99 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-08T20:47:04 IST" name="Suite" finished-at="2024-03-08T20:48:09 IST" duration-ms="65445">
+  <suite started-at="2024-03-11T20:52:56 IST" name="Default suite" finished-at="2024-03-11T20:53:01 IST" duration-ms="4408">
     <groups>
     </groups>
-    <test started-at="2024-03-08T20:47:04 IST" name="Test" finished-at="2024-03-08T20:48:09 IST" duration-ms="65445">
-      <class name="com.obsqura.tests.LoginTest">
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.obsqura.tests.LoginTest@49ec71f8]" started-at="2024-03-08T20:47:04 IST" name="initDriver" finished-at="2024-03-08T20:47:13 IST" duration-ms="9814" status="PASS">
+    <test started-at="2024-03-11T20:52:56 IST" name="Default test" finished-at="2024-03-11T20:53:01 IST" duration-ms="4408">
+      <class name="com.obsqura.tests.AdminTest">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.obsqura.tests.AdminTest@8f4ea7c]" started-at="2024-03-11T20:52:56 IST" name="initDriver" finished-at="2024-03-11T20:52:59 IST" duration-ms="2436" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyUserIsAbleToLogin()[pri:0, instance:com.obsqura.tests.LoginTest@49ec71f8]" started-at="2024-03-08T20:47:13 IST" name="verifyUserIsAbleToLogin" finished-at="2024-03-08T20:47:17 IST" duration-ms="3425" status="PASS">
+        <test-method signature="createAdmin()[pri:0, instance:com.obsqura.tests.AdminTest@8f4ea7c]" started-at="2024-03-11T20:52:59 IST" name="createAdmin" finished-at="2024-03-11T20:53:00 IST" duration-ms="1810" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.obsqura.tests.LoginTest@49ec71f8]" started-at="2024-03-08T20:47:17 IST" name="tearDown" finished-at="2024-03-08T20:47:17 IST" duration-ms="122" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.obsqura.tests.LoginTest -->
-      <class name="com.obsqura.tests.CreateDeleteExpenseTest">
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.obsqura.tests.CreateDeleteExpenseTest@55b699ef]" started-at="2024-03-08T20:47:17 IST" name="initDriver" finished-at="2024-03-08T20:47:28 IST" duration-ms="10619" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method signature="anotherTest()[pri:0, instance:com.obsqura.tests.CreateDeleteExpenseTest@55b699ef]" started-at="2024-03-08T20:47:28 IST" name="anotherTest" finished-at="2024-03-08T20:47:34 IST" duration-ms="6165" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- anotherTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.obsqura.tests.CreateDeleteExpenseTest@55b699ef]" started-at="2024-03-08T20:47:34 IST" name="tearDown" finished-at="2024-03-08T20:47:34 IST" duration-ms="120" status="PASS">
+        </test-method> <!-- createAdmin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.obsqura.tests.AdminTest@8f4ea7c]" started-at="2024-03-11T20:53:00 IST" name="tearDown" finished-at="2024-03-11T20:53:01 IST" duration-ms="118" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.obsqura.tests.CreateDeleteExpenseTest -->
-      <class name="com.obsqura.tests.CreateDeliveryBoyTest">
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.obsqura.tests.CreateDeliveryBoyTest@35d019a3]" started-at="2024-03-08T20:47:34 IST" name="initDriver" finished-at="2024-03-08T20:47:45 IST" duration-ms="10966" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method signature="createDeliveryBoy(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.obsqura.tests.CreateDeliveryBoyTest@35d019a3]" started-at="2024-03-08T20:47:45 IST" name="createDeliveryBoy" data-provider="getData" finished-at="2024-03-08T20:47:51 IST" duration-ms="6617" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Nisyy]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[user743588711]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[874708139]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createDeliveryBoy -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.obsqura.tests.CreateDeliveryBoyTest@35d019a3]" started-at="2024-03-08T20:47:51 IST" name="tearDown" finished-at="2024-03-08T20:47:52 IST" duration-ms="127" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.obsqura.tests.CreateDeliveryBoyTest@35d019a3]" started-at="2024-03-08T20:47:52 IST" name="initDriver" finished-at="2024-03-08T20:47:59 IST" duration-ms="7528" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method signature="createDeliveryBoy(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.obsqura.tests.CreateDeliveryBoyTest@35d019a3]" started-at="2024-03-08T20:47:59 IST" name="createDeliveryBoy" data-provider="getData" finished-at="2024-03-08T20:48:09 IST" duration-ms="9753" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Remya]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[user300435676]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[364060717]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createDeliveryBoy -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.obsqura.tests.CreateDeliveryBoyTest@35d019a3]" started-at="2024-03-08T20:48:09 IST" name="tearDown" finished-at="2024-03-08T20:48:09 IST" duration-ms="131" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.obsqura.tests.CreateDeliveryBoyTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.obsqura.tests.AdminTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

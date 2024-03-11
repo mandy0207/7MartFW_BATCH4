@@ -29,6 +29,9 @@ public class HomePage  extends PageActions{
 	@FindBy(xpath="//*[contains(text(),'Manage Delivery Boy')]")
 	private WebElement manageDeliveryBoy;
 	
+	@FindBy(xpath="//p[contains(text(),'Admin Users')]")
+	private WebElement adminUsersBtn;
+	
 	
 	
 	public String getBrandHeader() {
@@ -45,6 +48,9 @@ public class HomePage  extends PageActions{
 		clickElement(manageDeliveryBoy);
 	}
 	
+	public void navigateToAdminUsersPage() {
+		clickElement(adminUsersBtn);
+	}
 
 	
 }

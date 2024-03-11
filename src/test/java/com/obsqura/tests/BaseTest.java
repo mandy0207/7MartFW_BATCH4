@@ -11,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.obsqura.pages.AdminUsersPage;
 import com.obsqura.pages.ExpenseCategoryPage;
 import com.obsqura.pages.HomePage;
 import com.obsqura.pages.ListDeliveryBoyPage;
@@ -54,12 +55,15 @@ public class BaseTest {
 	public HomePage hp ;
 	public ExpenseCategoryPage exp;
 	public  ListDeliveryBoyPage ldb;
+	public AdminUsersPage adminUser;
 	
 	public void initPages() {
 		lp = new LoginPage(driver);
 		hp = new HomePage(driver);
 	    exp= new ExpenseCategoryPage(driver);
 	    ldb=new  ListDeliveryBoyPage(driver);
+	    adminUser= new AdminUsersPage(driver);
+	    
 	    
 	}
 	
