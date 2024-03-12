@@ -32,6 +32,11 @@ public class HomePage  extends PageActions{
 	@FindBy(xpath="//p[contains(text(),'Admin Users')]")
 	private WebElement adminUsersBtn;
 	
+	@FindBy(xpath="//*[contains(text(),'Manage Content')]")
+	private WebElement manageContent;
+	
+	@FindBy(xpath="//*[contains(text(),'Manage News')]")
+	private WebElement manageNews;
 	
 	
 	public String getBrandHeader() {
@@ -50,6 +55,13 @@ public class HomePage  extends PageActions{
 	
 	public void navigateToAdminUsersPage() {
 		clickElement(adminUsersBtn);
+	}
+	
+	public void navigateToNewsPage() {
+		clickElement(manageContent);
+		 waitUntilClickable(manageNews);
+		clickElement(manageNews);
+		
 	}
 
 	

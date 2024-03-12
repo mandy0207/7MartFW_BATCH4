@@ -16,13 +16,14 @@ import com.obsqura.pages.ExpenseCategoryPage;
 import com.obsqura.pages.HomePage;
 import com.obsqura.pages.ListDeliveryBoyPage;
 import com.obsqura.pages.LoginPage;
+import com.obsqura.pages.NewsPage;
 import com.obsqura.utils.TestProperties;
 
 public class BaseTest {
 	
 	WebDriver driver=null;
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void initDriver() throws IOException {
 		
 		Properties prop = TestProperties.getProperties();
@@ -56,6 +57,7 @@ public class BaseTest {
 	public ExpenseCategoryPage exp;
 	public  ListDeliveryBoyPage ldb;
 	public AdminUsersPage adminUser;
+	public NewsPage news;
 	
 	public void initPages() {
 		lp = new LoginPage(driver);
@@ -63,11 +65,11 @@ public class BaseTest {
 	    exp= new ExpenseCategoryPage(driver);
 	    ldb=new  ListDeliveryBoyPage(driver);
 	    adminUser= new AdminUsersPage(driver);
-	    
+	    news= new NewsPage(driver);
 	    
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
 		driver.quit();
 	}

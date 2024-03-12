@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
-public class PageActions {
+public class PageActions extends WaitUtility{
 
 	@FindBy(css=".btn.btn-rounded.btn-danger")
 	protected WebElement newBtn;
@@ -21,6 +21,7 @@ public class PageActions {
 	private WebDriver driver;
 	
 	public PageActions(WebDriver driver) {
+		super(driver);
 		this.driver= driver;
 		
 	}

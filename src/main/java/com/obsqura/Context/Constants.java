@@ -1,4 +1,4 @@
-package Context;
+package com.obsqura.Context;
 
 public class Constants {
 
