@@ -38,6 +38,9 @@ public class HomePage  extends PageActions{
 	@FindBy(xpath="//*[contains(text(),'Manage News')]")
 	private WebElement manageNews;
 	
+	@FindBy(xpath="(//li //*[contains(text(),'Manage Expense')])[2]")
+	private WebElement manageExpense;
+	
 	
 	public String getBrandHeader() {
 		return brandHeader.getText();
@@ -61,6 +64,12 @@ public class HomePage  extends PageActions{
 		clickElement(manageContent);
 		 waitUntilClickable(manageNews);
 		clickElement(manageNews);
+		
+	}
+	
+	public void navigateToManageExpense() {
+		clickElement(manageExpenseToggle);
+		clickElement(manageExpense);
 		
 	}
 

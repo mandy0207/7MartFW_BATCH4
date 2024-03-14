@@ -1,5 +1,11 @@
 package com.obsqura.utils;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -27,11 +33,14 @@ public class PageActions extends WaitUtility{
 	}
 	
 	public void clickElement(WebElement element) {
+		waitUntilVisible(element);
+		waitUntilClickable(element);
 		element.click();
 	}
 	
 	public void setTextBox(WebElement element, String value) {
-		
+		waitUntilVisible(element);
+		waitUntilClickable(element);
 		element.sendKeys(value);
 	}
 	
@@ -59,6 +68,34 @@ public class PageActions extends WaitUtility{
 	public void setstaticDropdown(WebElement element, String value) {
 		Select staticDropdown = new Select(element);
 		staticDropdown.selectByVisibleText(value);
+	}
+	
+	public void shortWait() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void uploadFile(WebElement element, String fileToUpload) throws AWTException {
+		clickElement(element);
+		shortWait();
+		StringSelection ss = new StringSelection(fileToUpload);
+	     Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+
+	     //imitate mouse events like ENTER, CTRL+C, CTRL+V
+	     Robot robot = new Robot();
+	     robot.delay(250);
+	     robot.keyPress(KeyEvent.VK_ENTER);
+	     robot.keyRelease(KeyEvent.VK_ENTER);
+	     robot.keyPress(KeyEvent.VK_CONTROL);
+	     robot.keyPress(KeyEvent.VK_V);
+	     robot.keyRelease(KeyEvent.VK_V);
+	     robot.keyRelease(KeyEvent.VK_CONTROL);
+	     robot.keyPress(KeyEvent.VK_ENTER);
+	     robot.delay(90);
+	     robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 	
 	

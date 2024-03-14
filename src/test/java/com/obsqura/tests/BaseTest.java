@@ -17,6 +17,7 @@ import com.obsqura.pages.AdminUsersPage;
 import com.obsqura.pages.ExpenseCategoryPage;
 import com.obsqura.pages.HomePage;
 import com.obsqura.pages.ListDeliveryBoyPage;
+import com.obsqura.pages.ListExpensePage;
 import com.obsqura.pages.LoginPage;
 import com.obsqura.pages.NewsPage;
 import com.obsqura.utils.TestProperties;
@@ -30,9 +31,12 @@ public class BaseTest {
 	public void initDriver(@Optional String browserName) throws IOException {
 		
 		Properties prop = TestProperties.getProperties();
-		if(browserName.isEmpty() || browserName == null) {
-			  browserName =prop.getProperty("browserName");
+		
+		if(browserName==null || browserName.isEmpty()) {
+		browserName=prop.getProperty("browserName");
 		}
+		
+		
 		System.out.println(browserName);
 		String env=prop.getProperty("Envrionment");
 		System.out.println("Executing in "+ env);
@@ -63,6 +67,7 @@ public class BaseTest {
 	public  ListDeliveryBoyPage ldb;
 	public AdminUsersPage adminUser;
 	public NewsPage news;
+	public ListExpensePage lep;
 	
 	public void initPages() {
 		lp = new LoginPage(driver);
@@ -71,7 +76,7 @@ public class BaseTest {
 	    ldb=new  ListDeliveryBoyPage(driver);
 	    adminUser= new AdminUsersPage(driver);
 	    news= new NewsPage(driver);
-	    
+	    lep=new ListExpensePage(driver);
 	}
 	
 	@AfterMethod(alwaysRun=true)
