@@ -10,6 +10,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import com.obsqura.pages.AdminUsersPage;
 import com.obsqura.pages.ExpenseCategoryPage;
@@ -24,10 +26,13 @@ public class BaseTest {
 	WebDriver driver=null;
 	
 	@BeforeMethod(alwaysRun=true)
-	public void initDriver() throws IOException {
+	@Parameters({"browserName"})
+	public void initDriver(@Optional String browserName) throws IOException {
 		
 		Properties prop = TestProperties.getProperties();
-		String browserName =prop.getProperty("browserName");
+		if(browserName.isEmpty() || browserName == null) {
+			  browserName =prop.getProperty("browserName");
+		}
 		System.out.println(browserName);
 		String env=prop.getProperty("Envrionment");
 		System.out.println("Executing in "+ env);

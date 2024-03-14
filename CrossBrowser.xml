@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	
+	<test name="Login Test">
+		<parameter name="browserName" value="Chrome"></parameter>
+		<classes>
+			<class name="com.obsqura.tests.LoginTest" />
+		</classes>
+	</test>
+
+
+	<test name="CreateDeleteExpenseTest">
+		<parameter name="browserName" value="Edge"></parameter>
+		<classes>
+			<class name="com.obsqura.tests.CreateDeleteExpenseTest" />
+		</classes>
+	</test>
+
+	<test name="CreateDeliveryBoyTest">
+		<parameter name="browserName" value="Chrome"></parameter>
+		<classes>
+			<class name="com.obsqura.tests.CreateDeliveryBoyTest" />
+		</classes>
+	</test>
+
+	<test name="CreateNewsTest">
+		<parameter name="browserName" value="Edge"></parameter>
+		<classes>
+			<class name="com.obsqura.tests.CreateNewsTest" />
+		</classes>
+	</test>
+
+
+	<test name="AdminTest">
+		<parameter name="browserName" value="Chrome"></parameter>
+		<classes>
+			<class name="com.obsqura.tests.AdminTest" />
+		</classes>
+	</test>
+</suite> 

@@ -17,9 +17,7 @@ public class LoginTest extends BaseTest {
 		String actualHeader=hp.getBrandHeader();
 		
 		Assert.assertEquals(actualHeader, "7rmart supermarket");
-		
-		
-		
+			
 	}
 	
 }
