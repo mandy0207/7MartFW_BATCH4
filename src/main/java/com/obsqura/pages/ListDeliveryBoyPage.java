@@ -30,7 +30,7 @@ public class ListDeliveryBoyPage  extends PageActions{
 
 	
 	
-	public void submitDeliverBoyData(String name, String userName, String password) {
+	public String submitDeliverBoyData(String name, String userName, String password) {
 		clickElement(newBtn);
 		setTextBox(nameInput,name);
 		setTextBox(usernameInput, userName);
@@ -38,8 +38,8 @@ public class ListDeliveryBoyPage  extends PageActions{
 		scrollToBottomofPage();
 		shortWait();
 		clickElement(saveBtn);
-		
-		
+		String alertText=alertMsg.getText();
+		return getSplitStringText(alertText);
 	
 	}
 	

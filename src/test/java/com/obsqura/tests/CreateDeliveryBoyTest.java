@@ -15,7 +15,9 @@ public class CreateDeliveryBoyTest extends BaseTest {
 		lp.Login();
 		hp.navigateToManageDeilveryBoy();
 		System.out.println(name +" "+userName+" "+password);
-		ldb.submitDeliverBoyData( name,userName, password);
+		String actualAlertText = ldb.submitDeliverBoyData( name,userName, password);
+		
+		
 		
 	}
 	
