@@ -18,8 +18,7 @@ public class ExpenseRecordTest extends BaseTest{
 		
 		String actualalertText=lep.createListExpense(Constants.fileToUpload);
 		Assert.assertEquals(actualalertText, "Expense Record Created Successfully");	
-		
-		
+	
 		
 	}
 }

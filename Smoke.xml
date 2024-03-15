@@ -10,6 +10,7 @@
   <test  name="Test">
     <classes>
       <class name="com.obsqura.tests.LoginTest"/>
+       <class name="com.obsqura.tests.ExpenseRecordTest"/>
       <class name="com.obsqura.tests.CreateDeleteExpenseTest"/>
       <class name="com.obsqura.tests.CreateDeliveryBoyTest"/>
       <class name="com.obsqura.tests.CreateNewsTest"/>

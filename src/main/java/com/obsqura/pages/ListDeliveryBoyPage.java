@@ -36,7 +36,7 @@ public class ListDeliveryBoyPage  extends PageActions{
 		setTextBox(usernameInput, userName);
 		setTextBox(passwordInput, password);
 		scrollToBottomofPage();
-		ShortWait();
+		shortWait();
 		clickElement(saveBtn);
 		
 		

@@ -13,7 +13,7 @@ import com.obsqura.utils.UniqueGenerator;
 public class CreateDeleteExpenseTest extends BaseTest {
 
 	@Test
-	public void anotherTest() throws IOException {
+	public void verifyUserIsAbleTocreateDeleteExpense() throws IOException {
 	
 		lp.Login();
 		hp.navigateToExpenseCategoryPage();

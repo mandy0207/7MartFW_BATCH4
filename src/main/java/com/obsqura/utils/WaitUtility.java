@@ -33,7 +33,7 @@ public class WaitUtility {
 		wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 	
-	public void ShortWait() {
+	public void shortWait() {
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {

@@ -70,16 +70,9 @@ public class PageActions extends WaitUtility{
 		staticDropdown.selectByVisibleText(value);
 	}
 	
-	public void shortWait() {
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
 	
 	public void uploadFile(WebElement element, String fileToUpload) throws AWTException {
-		clickElement(element);
+		clickJavaScript(element);
 		shortWait();
 		StringSelection ss = new StringSelection(fileToUpload);
 	     Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
@@ -97,6 +90,13 @@ public class PageActions extends WaitUtility{
 	     robot.delay(90);
 	     robot.keyRelease(KeyEvent.VK_ENTER);
 	}
+	
+    public void clickJavaScript(WebElement element) {
+    	JavascriptExecutor js= (JavascriptExecutor)driver;
+    	waitUntilVisible(element);
+		waitUntilClickable(element);
+    	js.executeScript("arguments[0].click();",element);
+    }
 	
 	
 	

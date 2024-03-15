@@ -38,4 +38,13 @@
 			<class name="com.obsqura.tests.AdminTest" />
 		</classes>
 	</test>
+	
+		<test name="ExpenseRecordTest">
+		<parameter name="browserName" value="Chrome"></parameter>
+		<classes>
+			 <class name="com.obsqura.tests.ExpenseRecordTest"/>
+		</classes>
+	</test>
+	
+	
 </suite> 

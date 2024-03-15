@@ -30,17 +30,19 @@ public class ListExpensePage extends PageActions{
 	@FindBy(id="amount")
 	private WebElement amountInput;
 	
-//	@FindBy(xpath="//*[@type='file']")
-//	private WebElement chooseFile;
+	@FindBy(xpath="//*[@type='file']")
+	private WebElement chooseFile;
+	
+	@FindBy(name="user_id")
+	private WebElement selectuserDropdown;
 	
 
 	public String createListExpense(String filePath) throws AWTException {
 		clickElement(newBtn);
+		setstaticDropdown(selectuserDropdown ,"Admin(Admin)");
 		setstaticDropdown(selectDropdownExpenseType ,"Credit Bank");
 		setTextBox(amountInput,"456");
 		scrollToBottomofPage();
-		shortWait();
-		WebElement chooseFile=	driver.findElement(By.xpath("//*[@for='userfile']//following-sibling::input"));
 		uploadFile(chooseFile,filePath);
 		clickElement(saveBtn);
 		String alertText=alertMsg.getText();
