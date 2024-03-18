@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="5">
+<listeners>
+		<listener class-name="com.obsqura.listeners.ReportListener"></listener>
+			<listener class-name="com.obsqura.listeners.MyTransformer"></listener>
+	</listeners>
+	<test name="Login Test">
+		<classes>
+			<class name="com.obsqura.tests.LoginTest" />
+		</classes>
+	</test>
+
+
+	<test name="CreateDeleteExpenseTest">
+		<classes>
+			<class name="com.obsqura.tests.CreateDeleteExpenseTest" />
+		</classes>
+	</test>
+
+	<test name="CreateDeliveryBoyTest">
+		<classes>
+			<class name="com.obsqura.tests.CreateDeliveryBoyTest" />
+		</classes>
+	</test>
+
+	<test name="CreateNewsTest">
+		<classes>
+			<class name="com.obsqura.tests.CreateNewsTest" />
+		</classes>
+	</test>
+
+
+	<test name="AdminTest">
+		<classes>
+			<class name="com.obsqura.tests.AdminTest" />
+		</classes>
+	</test>
+	
+		<test name="ExpenseRecordTest">
+		<classes>
+			 <class name="com.obsqura.tests.ExpenseRecordTest"/>
+		</classes>
+	</test>
+</suite>

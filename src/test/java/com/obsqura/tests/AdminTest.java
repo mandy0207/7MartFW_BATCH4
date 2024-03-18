@@ -23,6 +23,7 @@ public class AdminTest extends BaseTest {
 		String userCreated=adminUser.createAdminUser(userName, password, userType);
 		
 		Assert.assertEquals(userCreated, "User Created Successfully");
+		Assert.fail();
 		
 		
 	}

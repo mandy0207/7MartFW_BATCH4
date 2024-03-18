@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsqura.tests.ExpenseRecordTest">
+      <class name="com.obsqura.tests.CreateNewsTest">
         <methods>
+          <include name="createNews"/>
           <include name="initDriver"/>
-          <include name="verifyUserIsAbleTocreateExpenseRecord"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.obsqura.tests.ExpenseRecordTest -->
+      </class> <!-- com.obsqura.tests.CreateNewsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

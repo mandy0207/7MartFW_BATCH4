@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import com.obsqura.Context.WebDriverManager;
 import com.obsqura.pages.AdminUsersPage;
 import com.obsqura.pages.ExpenseCategoryPage;
 import com.obsqura.pages.HomePage;
@@ -55,9 +56,10 @@ public class BaseTest {
 			System.out.println("choose correct browser");
 		}
 		initPages();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.get( URL);
+		WebDriverManager.setDriver(driver);
+	    WebDriverManager.getDriver().manage().window().maximize();
+	    WebDriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	    WebDriverManager.getDriver().get(URL);
 		
 	}
 	
@@ -81,6 +83,6 @@ public class BaseTest {
 	
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
-		driver.quit();
+		WebDriverManager.getDriver().quit();
 	}
 }

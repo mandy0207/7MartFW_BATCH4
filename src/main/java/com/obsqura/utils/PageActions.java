@@ -5,13 +5,21 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+
+import com.obsqura.Context.Constants;
+import com.obsqura.Context.WebDriverManager;
 
 public class PageActions extends WaitUtility{
 
@@ -96,6 +104,17 @@ public class PageActions extends WaitUtility{
     	waitUntilVisible(element);
 		waitUntilClickable(element);
     	js.executeScript("arguments[0].click();",element);
+    }
+    
+    public static String getScreenshot(String testName) throws IOException {
+    	TakesScreenshot screenshot = (TakesScreenshot)WebDriverManager.getDriver(); 
+		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+		String path=Constants.WORKINGDIRECTORY+"\\Reports\\"+testName+".png";
+	    File destFile = new File(path);
+	    FileUtils.moveFile(srcFile, destFile);
+	    return path;
+	    
+	    
     }
 	
 	
