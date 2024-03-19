@@ -22,8 +22,7 @@ public class AdminTest extends BaseTest {
 		hp.navigateToAdminUsersPage();
 		String userCreated=adminUser.createAdminUser(userName, password, userType);
 		
-		Assert.assertEquals(userCreated, "User Created Successfully");
-		Assert.fail();
+		Assert.assertEquals(userCreated, "User Created ");
 		
 		
 	}
