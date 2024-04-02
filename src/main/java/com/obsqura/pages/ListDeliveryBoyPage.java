@@ -17,8 +17,7 @@ public class ListDeliveryBoyPage  extends PageActions{
 		PageFactory.initElements(driver, this);
 	}
 	
-	
-	
+
 	@FindBy(id="name")
 	private WebElement nameInput;
 	

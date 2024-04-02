@@ -19,7 +19,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 import com.obsqura.Context.Constants;
-import com.obsqura.Context.WebDriverManager;
+import com.obsqura.Context.DriverManager;
 
 public class PageActions extends WaitUtility{
 
@@ -40,6 +40,7 @@ public class PageActions extends WaitUtility{
 		
 	}
 	
+
 	public void clickElement(WebElement element) {
 		waitUntilVisible(element);
 		waitUntilClickable(element);
@@ -107,7 +108,7 @@ public class PageActions extends WaitUtility{
     }
     
     public static String getScreenshot(String testName) throws IOException {
-    	TakesScreenshot screenshot = (TakesScreenshot)WebDriverManager.getDriver(); 
+    	TakesScreenshot screenshot = (TakesScreenshot)DriverManager.getDriver(); 
 		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
 		String path=Constants.WORKINGDIRECTORY+"\\Reports\\"+testName+".png";
 	    File destFile = new File(path);

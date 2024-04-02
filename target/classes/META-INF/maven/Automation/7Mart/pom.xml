@@ -53,7 +53,7 @@
 					<version>3.2.5</version>
 					<configuration>
 						<suiteXmlFiles>
-							<suiteXmlFile>testng.xml</suiteXmlFile>
+							<suiteXmlFile>parallel.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

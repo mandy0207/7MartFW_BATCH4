@@ -34,7 +34,6 @@ public class LoginPage extends PageActions{
 	
 	public void Login() throws IOException {
 		Properties prop = TestProperties.getProperties();
-		
 		setTextBox(userName,prop.getProperty("username"));
 		setTextBox(password,prop.getProperty("password"));
 		clickElement(submitBtn);

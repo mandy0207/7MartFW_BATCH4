@@ -36,8 +36,7 @@ public class AdminUsersPage extends PageActions{
 		setstaticDropdown(selectDropdown, userType);
 		clickElement(saveBtn);
 		String alertText=alertMsg.getText();
-		return getSplitStringText(alertText);
-		
+		return getSplitStringText(alertText);	
 		
 	}
 	

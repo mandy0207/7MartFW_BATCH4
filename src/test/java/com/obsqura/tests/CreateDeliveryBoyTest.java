@@ -2,6 +2,7 @@ package com.obsqura.tests;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -16,7 +17,7 @@ public class CreateDeliveryBoyTest extends BaseTest {
 		hp.navigateToManageDeilveryBoy();
 		System.out.println(name +" "+userName+" "+password);
 		String actualAlertText = ldb.submitDeliverBoyData( name,userName, password);
-		
+		Assert.assertEquals(actualAlertText, "Delivery Boy Details Created Successfully");
 		
 		
 	}

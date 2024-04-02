@@ -3,7 +3,7 @@
 <suite name="Suite" parallel="tests" thread-count="5">
 <listeners>
 		<listener class-name="com.obsqura.listeners.ReportListener"></listener>
-			<listener class-name="com.obsqura.listeners.MyTransformer"></listener>
+	  <listener class-name="com.obsqura.listeners.MyTransformer"></listener>
 	</listeners>
 	<test name="Login Test">
 		<classes>

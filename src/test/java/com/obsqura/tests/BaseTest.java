@@ -10,10 +10,11 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import com.obsqura.Context.WebDriverManager;
+import com.obsqura.Context.DriverManager;
 import com.obsqura.pages.AdminUsersPage;
 import com.obsqura.pages.ExpenseCategoryPage;
 import com.obsqura.pages.HomePage;
@@ -22,6 +23,7 @@ import com.obsqura.pages.ListExpensePage;
 import com.obsqura.pages.LoginPage;
 import com.obsqura.pages.NewsPage;
 import com.obsqura.utils.TestProperties;
+
 
 public class BaseTest {
 	
@@ -56,10 +58,10 @@ public class BaseTest {
 			System.out.println("choose correct browser");
 		}
 		initPages();
-		WebDriverManager.setDriver(driver);
-	    WebDriverManager.getDriver().manage().window().maximize();
-	    WebDriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-	    WebDriverManager.getDriver().get(URL);
+		DriverManager.setDriver(driver);
+	    DriverManager.getDriver().manage().window().maximize();
+	    DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	    DriverManager.getDriver().get(URL);
 		
 	}
 	
@@ -83,6 +85,6 @@ public class BaseTest {
 	
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
-		WebDriverManager.getDriver().quit();
+		DriverManager.getDriver().quit();
 	}
 }

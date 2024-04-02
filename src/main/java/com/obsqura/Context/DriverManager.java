@@ -2,7 +2,7 @@ package com.obsqura.Context;
 
 import org.openqa.selenium.WebDriver;
 
-public class WebDriverManager {
+public class DriverManager {
 	
 private static ThreadLocal<WebDriver> driverInstance = new ThreadLocal<>();
 	

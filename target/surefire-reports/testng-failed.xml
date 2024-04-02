@@ -7,13 +7,27 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="com.obsqura.tests.CreateDeleteExpenseTest">
+      <class name="com.obsqura.tests.CreateDeliveryBoyTest">
         <methods>
-          <include name="verifyUserIsAbleTocreateDeleteExpense"/>
+          <include name="initDriver"/>
+          <include name="tearDown"/>
+          <include name="createDeliveryBoy" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- com.obsqura.tests.CreateDeliveryBoyTest -->
+      <class name="com.obsqura.tests.AdminTest">
+        <methods>
+          <include name="initDriver"/>
+          <include name="createAdmin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.obsqura.tests.AdminTest -->
+      <class name="com.obsqura.tests.CreateNewsTest">
+        <methods>
+          <include name="createNews"/>
           <include name="initDriver"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.obsqura.tests.CreateDeleteExpenseTest -->
+      </class> <!-- com.obsqura.tests.CreateNewsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
